@@ -43,26 +43,28 @@ Wir haben hier einige unfertige und fehlerhafte Dateien, die Schritt für Schrit
 
 Die Kamera App ist nun Fehlerlos nutzbar
 
-// Als nächstes muss die Location Activity repariert werden. Hierfür muss zu Beginn wieder ein Button
+08. Schaut euch die GPS.kt an und löscht die Zeilen 31 und 70 um mit der Bearbeitung fortzufahren.
+
+// Als nächstes muss die Activity repariert werden. Hierfür muss zu Beginn wieder ein Button
     hinzugefügt werden, der die Berechtigung zur Nutzung des Location Sensors abfragt.
 
-08. Erstellt einen Button der die Funktion checkingPermissions() aufruft. Dieser Button sollte ein Stück
+09. Erstellt einen Button der die Funktion checkingPermissions() aufruft. Dieser Button sollte ein Stück
     über der bereits existierenden Textzeile stehen.
 
 // In der oben genannten Funktion wird als erstes die passende Android API Version abgefragt.
     Passende API Versionen wären M = 23, N = 24, O = 26, P = 28, Q = 29, R = 30
 
-09. Korrigiert die Abfrage der Android Version.
+10. Korrigiert die Abfrage der Android Version.
 
 // Außerdem wird geschaut ob die Permissions aus dem Manifest (Access Fine Location) im Package Manager
     bereits akzeptiert wurden.
 
-10. Fragt die Manifest.permissions an der entsprechenden Stelle ab
+11. Fragt die Manifest.permissions an der entsprechenden Stelle ab
 
 // Nun müssen die angefragten Koordinaten eingetragen werden. Die Koordinaten werden in latitude und longitude
     angegeben und werden in der Funktion onLocationReceived(location) in einen String umgewandelt und
     dem Textfeld hinzugefügt.
 
-11. Erstellt eine Variable die latitude und longitude durch ein "|" getrennt beinhaltet und bindet diese
+12. Erstellt eine Variable die latitude und longitude durch ein "|" getrennt beinhaltet und bindet diese
     Variable an die Textview
 
