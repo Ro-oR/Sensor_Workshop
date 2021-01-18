@@ -28,7 +28,7 @@ class GPS : AppCompatActivity() {
         binding.btnBack.setOnClickListener {startActivity( Intent(this,MainActivity::class.java)) }
 
     }
-
+/*
     private fun checkingPermissons() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             when {
@@ -66,4 +66,6 @@ class GPS : AppCompatActivity() {
             }
         }
     }
+
+ */
 }
