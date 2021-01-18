@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:viewBindingIgnore="false"
+    android:background="#9CCCD2"
     tools:context=".MainActivity">
 
     <Button
@@ -35,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:background="#000000"
+        android:background="#44546A"
         android:text="Main Menu"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
