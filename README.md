@@ -15,7 +15,7 @@ Wir haben hier einige unfertige und fehlerhafte Dateien, die Schritt für Schrit
 03. Um fort zu fahren müssen die Zeilen 42 und 161 in der Camera.kt gelöscht werden
 
 // Bevor die Kamera genutzt werden kann, muss die Erlaubnis des Nutzers erteilt werden.
-    Dies wird durch eine If Abfrage in der OnStart Methode durchgeführt. Wenn alle Erlaubnisse erteilt wurden,
+    Dies wird durch eine If Abfrage in der OnCreate Methode durchgeführt. Wenn alle Erlaubnisse erteilt wurden,
     kann die Kamera gestartet werden indem die entsprechende Funktion aufgerufen wird.
     Wenn das nicht der Fall ist, werden die Rechte abgefragt.
 
@@ -43,7 +43,7 @@ Wir haben hier einige unfertige und fehlerhafte Dateien, die Schritt für Schrit
 
 Die Kamera App ist nun Fehlerlos nutzbar
 
-08. Schaut euch die GPS.kt an und löscht die Zeilen 31 und 70 um mit der Bearbeitung fortzufahren.
+08. Schaut euch die GPS.kt an und löscht die Zeilen 35 und 73 um mit der Bearbeitung fortzufahren.
 
 // Als nächstes muss die Activity repariert werden. Hierfür muss zu Beginn ein Button
     hinzugefügt werden, der die Berechtigung zur Nutzung des Location Sensors abfragt.
