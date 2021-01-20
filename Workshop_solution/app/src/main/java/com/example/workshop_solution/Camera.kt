@@ -1,11 +1,14 @@
 package com.example.workshop_solution
 
 import android.Manifest
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -19,6 +22,7 @@ import java.util.concurrent.Executors
 import androidx.camera.core.*
 import androidx.camera.core.ImageCapture.OutputFileOptions.*
 import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.core.content.FileProvider
 import com.example.workshop_solution.databinding.ActivityCameraBinding
 
 typealias LumaListener = (luma:Double) -> Unit
@@ -80,21 +84,17 @@ class Camera : AppCompatActivity() {
 
     private fun takePhoto() {
         //Erstelle eine Referenz vom bearbeitbaren Image Capture Use Case
-        val ImageCapture = imageCapture ?: return
+        val imageCapture = imageCapture ?: return
 
         //Erstelle eine Datei mit Zeitstempel
         // Unique Filenames
-        val photoFile = File (
-            outputDirectory,
-            SimpleDateFormat(FILENAME_FORMAT, Locale.GERMAN).format(System.currentTimeMillis()) + ".jpg"
-        )
+        val photoFile = File (outputDirectory,SimpleDateFormat(FILENAME_FORMAT, Locale.GERMAN).format(System.currentTimeMillis()) + ".jpg")
 
         //Erstelle Output Optionen die Metadaten und die oben erstelle photoFile beinhalten
-        val outputOptions = Builder(photoFile).build()
+        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
 
         //Image Capture Listener der getriggert wird, wenn ein Foto gemacht wurde
-        imageCapture!!.takePicture(
-            outputOptions, ContextCompat.getMainExecutor(this), object  : ImageCapture.OnImageSavedCallback {
+        imageCapture.takePicture(outputOptions, ContextCompat.getMainExecutor(this), object  : ImageCapture.OnImageSavedCallback {
                 override fun onError(exception: ImageCaptureException) {
                     Log.e(TAG, "Photo capture failed: ${exception.message}", exception)
                 }

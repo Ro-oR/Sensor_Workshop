@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Camera">
+    tools:context=".Camera"
+    tools:viewBindingIgnore="false">
 
     <Button
         android:id="@+id/btn_Back"
@@ -33,7 +34,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="32dp" >
-
-    </androidx.camera.view.PreviewView>
+        tools:layout_editor_absoluteY="32dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
