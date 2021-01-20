@@ -14,10 +14,12 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.workshopapp.databinding.ActivityGPSBinding
+import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
 class GPS : AppCompatActivity() {
     private lateinit var binding: ActivityGPSBinding
+    private lateinit var fusedlocationClient : FusedLocationProviderClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +28,8 @@ class GPS : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         binding.btnBack.setOnClickListener {startActivity( Intent(this,MainActivity::class.java)) }
+
+        fusedlocationClient = LocationServices.getFusedLocationProviderClient(this)
 
     }
 /*
@@ -48,11 +52,10 @@ class GPS : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     private fun updateLocation() {
-        val fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-        fusedLocationProviderClient.lastLocation.addOnSuccessListener { location : Location -> onLocationReceived(location) }
+        fusedLocationClient.lastLocation.addOnSuccessListener { location : Location? -> onLocationReceived(location) }
     }
 
-    private fun onLocationReceived(location: Location){
+    private fun onLocationReceived(location: Location?){
 
     }
 
