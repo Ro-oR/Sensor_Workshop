@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="#9CCCD2"
     android:foregroundTint="#FFFFFF"
-    tools:context=".GPS">
+    tools:context=".GPS"
+    tools:viewBindingIgnore="false">
 
     <Button
         android:id="@+id/btn_Back"
