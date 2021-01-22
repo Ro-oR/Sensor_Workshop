@@ -73,7 +73,7 @@ class Camera : AppCompatActivity() {
         val outputOptions =  Builder(photoFile).build()
 
         //Image Capture Listener der getriggert wird, wenn ein Foto gemacht wurde
-        imageCapture!!.takePicture(
+        imageCapture.takePicture(
             outputOptions, ContextCompat.getMainExecutor(this), object  : ImageCapture.OnImageSavedCallback {
                 override fun onError(exception: ImageCaptureException) {
                     Log.e(TAG, "Photo capture failed: ${exception.message}", exception)

@@ -48,16 +48,6 @@ class Camera : AppCompatActivity() {
         }
 
 
-
-        // Request camera permissions
-        if (allPermissionsGranted()) {
-            startCamera()
-        } else {
-            ActivityCompat.requestPermissions(
-                this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
-            )
-        }
-
          */
         if (allPermissionsGranted()) {
             startCamera()

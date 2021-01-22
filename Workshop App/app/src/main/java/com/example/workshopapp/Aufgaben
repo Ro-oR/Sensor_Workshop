@@ -23,9 +23,8 @@ Wir haben hier einige unfertige und fehlerhafte Dateien, die Schritt für Schrit
 
 // Die App ist noch nicht ausführbar. Um die Kamera des Geräts nutzen zu können, muss das System erst
     den Zugriff darauf frei geben. Dies wird im AndroidManifest erledigt.
-    Vor dem <application> Part werden zwei Zeilen benötigt. Erstens die Kamera 'aktivieren'
-    indem das Feature mit dem android:name "android.hardware.camera.any" eingefügt wird.
-    Und zweitens wird die Berechtigung dafür benötigt mit dem android;name "android.permission.CAMERA".
+    Vor dem <application> Part werden zwei Zeilen benötigt. Erstens das Kamera Feature 'aktivieren'
+    wie in den Folien vorhin gezeigt und als nächstes die Permission erteilen
     Beide Zeilen müssen jeweils mit einem < begonnen und mit einem /> geschlossen werden!
 
 05. Vervollständigt das Manifest wie oben beschrieben

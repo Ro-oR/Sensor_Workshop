@@ -56,8 +56,8 @@ class GPS : AppCompatActivity() {
     }
 
     private fun onLocationReceived(location: Location?){
-        val location_text = location?.latitude.toString() + "|" + location?.longitude.toString()
-        binding.locationTxt.text = location_text
+        val locationText = location?.latitude.toString() + "|" + location?.longitude.toString()
+        binding.locationTxt.text = locationText
     }
 
     private fun showDialog() {
